@@ -1,6 +1,10 @@
 @charset 'UTF-8';
 @import 'mixins';
 
+* {
+	user-select: none;
+}
+
 html,
 body {
 	height: 100%;
@@ -11,6 +15,7 @@ body {
 	background: linear-gradient(to right, #2f2f2f 0%,#414141 51%,#2f2f2f 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f2f', endColorstr='#2f2f2f',GradientType=1 );
 	position: relative;
+	font-family: 'Dosis', sans-serif;
 
 	display: flex;
 	align-items: center;
@@ -34,6 +39,7 @@ body {
 	width: 450px;
 	height: 150px;
 	border-radius: 300px;
+	margin-top: 45px;
 
 	input {
 		display: none;
@@ -145,6 +151,34 @@ body {
 		background: url('../noise2.png') repeat 0 0;
 		border-radius: 300px;
 	}	
+
+	.on {
+		position: absolute;
+		top: 50%;
+		right: 55px;
+		height: 30px;
+		width: 5px;
+		background: url('../noise2.png') repeat 0 0 #3a3939;
+		transform: translateY(-50%);
+		box-shadow: inset 0px 0px 5px rgba(0,0,0,0.3);
+		border-radius: 10px;
+	}
+
+	.off {
+		position: absolute;
+		top: 50%;
+		left: 55px;
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+		background: url('../noise2.png') repeat 0 0 #3a3939;
+		transform: translateY(-50%);
+		border-top: 3px solid #212121;
+		border-bottom: 2px solid #403f3f;
+		box-shadow: inset 0 0 27px rgba(0,0,0,.4), 
+					inset 0px -11px 4px -10px rgba(255,255,255,.2), 
+					inset 0px 13px 4px -10px rgba(0,0,0,.2);
+	}
 }
 
 .shadow0 {
@@ -197,29 +231,106 @@ body {
 	opacity: 1;
 }
 
-.on {
+.text-on {
 	position: absolute;
-	top: 50%;
-    right: 65px;
-    height: 30px;
-    width: 5px;
-    background: url('../noise2.png') repeat 0 0 #3a3939;
-    transform: translateY(-50%);
-	box-shadow: inset 0px 0px 5px rgba(0,0,0,0.3);
+	right: 40px;
+	top: -100px;
+	font-size: 30px;
+	color: #989696;
+	transition: all .2s ease-in-out;
+	z-index: 1;
 }
 
-.off {
+.text-on-bar {
 	position: absolute;
-	top: 50%;
-    left: 55px;
-    height: 30px;
-	width: 30px;
-	border-radius: 50%;
-    background: url('../noise2.png') repeat 0 0 #3a3939;
-    transform: translateY(-50%);
-    border-top: 3px solid #212121;
-	border-bottom: 2px solid #403f3f;
-	box-shadow: inset 0 0 27px rgba(0,0,0,.4), 
-				inset 0px -11px 4px -10px rgba(255,255,255,.2), 
-				inset 0px 13px 4px -10px rgba(0,0,0,.2);
+	top: -55px;
+    right: 53px;
+	transform: translateX(-50%);
+	height: 40px;
+	width: 4px;
+	border-radius: 10px;
+	background: url('../noise2.png') repeat 0 0 #303030;
+	box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+	transition: all .2s ease-in-out;
+	z-index: 1;
+}
+
+.text-off {
+	position: absolute;
+	left: 40px;
+	top: -100px;
+	font-size: 30px;
+	color: #989696;
+	transition: all .2s ease-in-out;
+	z-index: 1;
+}
+
+.text-off-bar {
+	position: absolute;
+	top: -55px;
+    left: 63px;
+	transform: translateX(-50%);
+	height: 40px;
+	width: 4px;
+	border-radius: 10px;
+	background: url('../noise2.png') repeat 0 0 #303030;
+	box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+	transition: all .2s ease-in-out;
+	z-index: 1;
+}
+
+.text-glow-on {
+	position: absolute;
+	right: 40px;
+	top: -100px;
+	font-size: 30px;
+	transition: all .2s ease-in-out;
+	z-index: 2;
+	color: #83f76d;
+	text-shadow: 0 0 5px #6fd45c;	
+	opacity: 1;
+}
+
+.text-glow-on-bar {
+	position: absolute;
+	top: -55px;
+    right: 53px;
+	transform: translateX(-50%);
+	height: 40px;
+	width: 4px;
+	border-radius: 10px;
+	background: url('../noise2.png') repeat 0 0 #83f76d;
+	box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+	transition: all .2s ease-in-out;
+	z-index: 2;
+	box-shadow: 0 0 5px #6fd45c;
+	opacity: 1;
+}
+
+.text-glow-off {
+	position: absolute;
+	left: 40px;
+	top: -100px;
+	font-size: 30px;
+	transition: all .2s ease-in-out;
+	z-index: 2;
+	color: #83f76d;
+	text-shadow: 0 0 5px #6fd45c;
+	opacity: 0;
+}
+
+.text-glow-off-bar {
+	position: absolute;
+	top: -55px;
+    left: 63px;
+	transform: translateX(-50%);
+	height: 40px;
+	width: 4px;
+	border-radius: 10px;
+	background: url('../noise2.png') repeat 0 0 #83f76d;
+	box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+	transition: all .2s ease-in-out;
+	z-index: 2;
+	box-shadow: 0 0 5px #6fd45c;
+	opacity: 0;
 }
