@@ -6,6 +6,6 @@
 
 ## [Live Demo](http://alikinvv.github.io/skeuomorph-switch/build)
 
-![minimal player](/img/gif.gif?raw=true)
+![minimal player](/gif.gif?raw=true)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-31485994-5/skeuomorph-switch-repo)](https://github.com/alikinvv/skeuomorph-switch)
