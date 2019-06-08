@@ -10,7 +10,6 @@ $(window).on('mousemove touchmove', (e) => {
     if (curDown) {
 
         if (translate > -108 && translate < 0 && $('.switch').hasClass('enable')) {
-            console.log(Math.abs(translate))
             $('.bar').css('transform', 'translateX(' + translate + 'px)');
             $('.text-glow-on').css('opacity', 1 - (Math.abs(translate) / 108));
             $('.text-glow-on-bar').css('opacity', 1 - (Math.abs(translate) / 108));
@@ -20,7 +19,6 @@ $(window).on('mousemove touchmove', (e) => {
         }
 
         if (pos < 215 && pos > -10 && $('.switch').hasClass('disable')) {
-            console.log(Math.abs(translate))
             $('.bar').css('transform', 'translateX(' + ((pos) * -1) / 2 + 'px)');
 
             $('.text-glow-on').css('opacity', 1 - (Math.abs(translate) / 108));

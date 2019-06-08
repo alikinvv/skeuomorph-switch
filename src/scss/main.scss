@@ -138,7 +138,7 @@ body {
 	z-index: 2;
 
 	&:active {
-		color: grabbing;
+		cursor: grabbing;
 	}
 
 	&::before {
