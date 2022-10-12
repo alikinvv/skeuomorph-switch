@@ -17,7 +17,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-svg-sprite": "^1.4.0",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^1.2.4",
     "gulp-tinypng": "^1.0.2"
   },
